@@ -1,0 +1,48 @@
+<!-- template for display player's names -->
+{% extends "wf_app/base.html" %}
+{% block content %}
+<form>
+  <h3> Napastnicy </h3>
+  {% for player in players %}
+  {% if  player.player_position == "Napastnik" %}
+  <div class=" form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">{{ player.player_name }}</label>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  <h3> Pomocnicy </h3>
+  {% for player in players %}
+  {% if  player.player_position == "Pomocnik" %}
+  <div class=" form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">{{ player.player_name }}</label>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  <h3> Obrońcy </h3>
+  {% for player in players %}
+  {% if  player.player_position == "Obrońca" %}
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">{{ player.player_name }}</label>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  <h3> Bramkarze </h3>
+  {% for player in players %}
+  {% if  player.player_position == "Bramkarz" %}
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">{{ player.player_name }}</label>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
