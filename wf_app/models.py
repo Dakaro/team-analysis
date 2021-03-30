@@ -8,6 +8,8 @@ class Player(models.Model):
     player_percent = models.FloatField(default = 0)
     player_position = models.CharField(max_length = 30)
 
+    
+
 class Team(models.Model):
     team_name = models.CharField(max_length = 30)
     players_list = models.TextField(max_length = 200)
